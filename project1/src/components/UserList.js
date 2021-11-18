@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-
+//import User from './User';
 function UserList(){
     const [users, setUsers] = useState([]);
     useEffect(() => {
@@ -16,8 +16,13 @@ function UserList(){
     },[]);
     return(
         <div>
-           <p>{users[1].first}</p>
-             {console.log(users[0])}
+             {console.log(users)}
+             {/* <User /> */}
+             {users.map((user) => {
+                 return <div key={user.login.uuid}>
+                            <p>{user.name.title}</p>
+                        </div>
+             })}
            
         </div>
     )
