@@ -5,7 +5,7 @@ import App1 from './components/App1';
 function App() {
   return (
     <div className="App">
-      <h1>Hi</h1>
+      <h1>app</h1>
       <App1 />
     </div>
   );

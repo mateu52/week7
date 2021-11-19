@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-function User(){
-
+function User({userData}){
+    //const [name, setName] = useState(userData)
     return(
         <div>
-            <p>witam</p>
+            <p></p>
         </div>
     )
 }
