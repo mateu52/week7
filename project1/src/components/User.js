@@ -1,10 +1,17 @@
 import React, {useState} from 'react';
 
 function User({userData}){
-    //const [name, setName] = useState(userData)
+    const [names, setName] = useState(userData);
     return(
         <div>
-            <p></p>
+            <p>ok</p>
+             {names.map((user) => {
+                return (
+                    <div key={user.login.uuid}>
+                        <p>{user.login.username}</p>
+                    </div>
+                )
+            })} 
         </div>
     )
 }
