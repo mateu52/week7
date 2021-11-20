@@ -11,20 +11,13 @@ function UserList(){
             .catch(error => console.error(error))
     },[]);
     return (
-        <div>
-                <p>AHA:)</p>
-            {users &&
-            users.length !== 0 &&
-            users.map((user) => {
-                return (
-                    <User
-                        key={user.login.uuid} 
-                        userData={users} 
-                    />
-                )
-            })}
-        </div>
-    );
+        <>
+            <p>AHA:)</p>
+                <User
+                    userData={users} 
+                />
+        </>
+    )
 }
 
 export default UserList;

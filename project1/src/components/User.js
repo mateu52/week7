@@ -1,14 +1,19 @@
 import React, {useState} from 'react';
 
 function User({userData}){
-    const [names, setName] = useState(userData);
+    //const [names, setName] = useState(userData);
     return(
         <div>
             <p>ok</p>
-             {names.map((user) => {
+             {userData.map((user) => {
                 return (
                     <div key={user.login.uuid}>
-                        <p>{user.login.username}</p>
+                        <h5>_________________</h5>
+                        <p>{user.name.first}</p>
+                        <p>{user.location.street.name}: {user.location.street.number}</p>
+                        <p>{user.location.city}</p>
+                        <h5>................................</h5>
+                        
                     </div>
                 )
             })} 
@@ -17,3 +22,7 @@ function User({userData}){
 }
 
 export default User;
+                        // 
+                        // <p>{user.email}</p>
+                        // <p>{user.registered.date}</p>  poniedziałek, 11 maja)
+                        // <p>{user.picture.large}</p> 
