@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
-
+import React from 'react';
+import "./User.css";
 function User({userData}){
-    //const [names, setName] = useState(userData);
     const checkVal = (value, text) => {
         if (!value) {
             return text;
@@ -9,20 +8,22 @@ function User({userData}){
         return value;
     }
     return(
-        <div>
-            <p>ok</p>
+        <div className="userCss">
              {userData.map((user) => {
                 return (
-                    <div key={user.login.uuid}>
-                        <h5>_________________</h5>
+                    <div key={user.login.uuid} className="userMap">
                         <p><img alt="foto" src={user.picture.large}></img></p>
-                        <p>{checkVal(user.name.first, "Nie podano imienia")} {user.name.last}</p>
-                        <p>{user.location.street.name}: {user.location.street.number}</p>
+                        <p>
+                            {checkVal(user.name.first, "Nie podano imienia")} 
+                            {checkVal(user.name.last, "Nie podano nazwiska")}
+                        </p>
+                        <p>
+                            {checkVal(user.location.street.name, "brak")}: 
+                            {checkVal(user.location.street.number, "brak")}
+                        </p>
                         <p>{user.location.city}</p>
                         <p>{user.email}</p>
                         <p>{new Date(user.registered.date).toDateString()}</p>
-                        <h5>................................</h5>
-                        
                     </div>
                 )
             })} 
@@ -31,6 +32,3 @@ function User({userData}){
 }
 
 export default User;
-                        
-                        // <p>{user.registered.date}</p>  poniedziałek, 11 maja)
-                        // <p>{user.picture.large}</p> 

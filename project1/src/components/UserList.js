@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import User from './User';
+import './UserList.css';
 function UserList(){
     const [users, setUsers] = useState([]);
     useEffect(() => {
@@ -11,12 +12,11 @@ function UserList(){
             .catch(error => console.error(error))
     },[]);
     return (
-        <>
-            <p>AHA:)</p>
+        <div className="bodyApp">
                 <User
                     userData={users} 
                 />
-        </>
+        </div>
     )
 }
 
