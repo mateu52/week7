@@ -1,6 +1,6 @@
 import React from 'react';
 import "./User.css";
-function User({userData}){
+function User({userData}) {
     const checkVal = (value, text) => {
         if (!value) {
             return text;

@@ -21,6 +21,3 @@ function UserList(){
 }
 
 export default UserList;
-/* 
-<User key={user.login.uuid}
-userData={user} */
