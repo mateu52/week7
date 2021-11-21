@@ -4,7 +4,7 @@ import './UserList.css';
 function UserList(){
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('https://randomuser.me/api/?results=2')
+        fetch('https://randomuser.me/api/?results=10')
             .then((response) => response.json())
             .then ((data) => {
                 setUsers(data.results);

@@ -3,5 +3,8 @@
     font-size: 12px;
     font-weight: 600;
     font-style:italic;
+    display: flex;
+    flex-wrap: wrap;
+
 
 }
